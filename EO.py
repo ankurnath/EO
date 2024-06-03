@@ -154,7 +154,7 @@ if __name__ == '__main__':
             spins= np.random.randint(2, size=graph.shape[0])
             arguments.append((g,spins,actions[i]))
         
-        with Pool() as pool:
+        with Pool(40) as pool:
             best_cut=np.max(pool.starmap(EO, arguments))
 
         best_cuts.append(best_cut)
