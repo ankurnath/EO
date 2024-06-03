@@ -23,4 +23,4 @@ for distribution in [ 'Physics',
         command= f'python EO.py --distribution {distribution} --tau {tau}'
 
         subprocess.run(command,shell=True,check=True)
-    break
+    # break
